@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Accessibility · Robora Therapy Solutions</title>
+<meta name="description" content="Robora is committed to WCAG 2.1 AA accessibility. How we have built this site, what is still in progress, and how to tell us when we fall short.">
+<meta name="theme-color" content="#1f3322">
+<link rel="icon" type="image/png" href="../assets/img/logo-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Accessibility · Robora Therapy Solutions">
+<meta property="og:description" content="Robora is committed to WCAG 2.1 AA accessibility. How we have built this site, what is still in progress, and how to tell us when we fall short.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/img/joanne.jpg">
+
+<!-- Fonts: Fraunces (display), Inter Tight (body), Caveat (handwritten accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/robora.css">
+</head>
+<body>
+
+<a href="#main" class="sr-only">Skip to main content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../" class="nav-brand" aria-label="Robora Therapy Solutions, home">
+      <img src="../assets/img/logo-icon.png" alt="">
+      <span class="wm">Robora<i>.</i></span>
+    </a>
+  </div>
+</nav>
+
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+<div class="nav-links" id="navLinks">
+  <a href="../about/">About</a>
+  <a href="../#approach">Approach</a>
+  <a href="../#services">Services</a>
+  <a href="../#journal">Journal</a>
+  <a href="../book/" class="btn btn-primary nav-cta">Book a session</a>
+  <div class="nav-drawer-foot">Rooted in love. Restored by grace.</div>
+</div>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<main id="main">
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Built to be reached</span>
+    <h1 class="reveal in">Accessibility <em>statement</em>.</h1>
+    <p class="lede reveal in">A practice that calls itself a sanctuary should be one for everyone who arrives at the door.</p>
+  </div>
+</section>
+
+<section class="section-tight" style="padding-top:0;">
+  <div class="container">
+    <div class="prose reveal">
+      <p class="lede">Robora Therapy Solutions is committed to making our website and our services accessible to people with disabilities. This page describes what we have done, what we are still working on, and how to tell us when we have fallen short.</p>
+
+      <h2>Our commitment</h2>
+      <p>We aim to meet the <strong>Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</strong>. These are the international standards for accessible web content, and they cover four core principles: perceivable, operable, understandable, and robust.</p>
+
+      <h2>What we have done</h2>
+      <ul>
+        <li><strong>Colour contrast.</strong> All text on this site meets or exceeds the 4.5:1 contrast ratio required for normal text, and 3:1 for large text. We test this before any visual change ships.</li>
+        <li><strong>Keyboard navigation.</strong> Every interactive element on the site can be reached, focused, and activated using a keyboard alone. Focus indicators are clearly visible.</li>
+        <li><strong>Screen reader support.</strong> Headings, landmarks, form labels, and image alt text are written for screen readers — not just for SEO. Forms include real <code>&lt;label&gt;</code> elements and validation messages that describe what is wrong, in plain language.</li>
+        <li><strong>Reduced motion.</strong> If your operating system is set to reduce motion, animations on this site are disabled. The reveal-on-scroll behaviour, hover transitions, and the oak tree animation in our hero all respect that preference.</li>
+        <li><strong>No flashing content.</strong> Nothing on this site flashes, strobes, or rapidly changes brightness — content of that kind can trigger seizures in people with photosensitive epilepsy.</li>
+        <li><strong>Plain language.</strong> Where we can, we choose ordinary words over clinical jargon. Where a technical term is unavoidable, we explain it.</li>
+      </ul>
+
+      <h2>What we are still working on</h2>
+      <p>We are honest about our gaps:</p>
+      <ul>
+        <li>We do not yet offer this site in any language other than English. A Yoruba translation is on our roadmap for 2027.</li>
+        <li>Some of the imagery on the site is decorative and does not carry meaning a screen reader needs. Where this is the case, we mark images as decorative — but the call is sometimes a judgement, and we welcome correction.</li>
+        <li>We have not yet user-tested with people who use assistive technology daily. We plan to commission this in 2026.</li>
+      </ul>
+
+      <h2>Accessibility in our practice</h2>
+      <p>Accessibility is not only a website matter. In our therapy practice we offer:</p>
+      <ul>
+        <li><strong>Online sessions</strong> for clients who cannot easily travel to our Lagos space.</li>
+        <li><strong>Quiet, low-stimulation rooms</strong> for clients with sensory sensitivities.</li>
+        <li><strong>Flexible session lengths</strong> for clients for whom 50 minutes is too long, or too short.</li>
+        <li><strong>Written summaries</strong> for clients who process better through writing than through verbal recall.</li>
+        <li><strong>Sliding-scale rates</strong> for families for whom the standard fee is a barrier — please ask. We do not advertise this widely because we trust people to ask honestly when they need to.</li>
+      </ul>
+
+      <h2>Tell us when we have failed</h2>
+      <p>If you encounter an accessibility barrier on this site, please tell us. We treat accessibility issues as bugs — they get fixed, not filed.</p>
+      <p>The fastest way is to email <a href="mailto:hello@roboratherapy.com">hello@roboratherapy.com</a> with the subject line "Accessibility". Please include: the page or feature where the issue occurred, what you were trying to do, what happened instead, and (if you are willing to share) the assistive technology you were using.</p>
+      <p>We aim to acknowledge within 2 working days and resolve within 14 working days. Where a fix is more complex, we will tell you what we are doing and when to expect it.</p>
+
+      <h2>Crisis resources</h2>
+      <p>If this site is not the right resource for you in this moment, here are some that may be:</p>
+      <ul>
+        <li><strong>Mentally Aware Nigeria Initiative</strong> — <a href="https://mentallyaware.org">mentallyaware.org</a></li>
+        <li><strong>Lagos State Domestic and Sexual Violence Response Team</strong> — call 112 or 08137960048</li>
+        <li><strong>Nigerian Suicide Prevention Initiative helpline</strong> — 0806 210 6493</li>
+        <li><strong>International Association for Suicide Prevention</strong> directory — <a href="https://findahelpline.com">findahelpline.com</a> (worldwide)</li>
+      </ul>
+      <p>If you or someone you love is in immediate danger, please call your local emergency number first.</p>
+
+      <h2>This page itself</h2>
+      <p>This statement was last reviewed in April 2026. We review it twice a year, or whenever we make significant changes to the site.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">Robora<i>.</i></div>
+        <p>A holistic counselling and emotional wellness practice. Helping children, teens, and families heal, grow, and thrive — one root at a time.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Practice</h3>
+        <ul>
+          <li><a href="../about/">About Joanne</a></li>
+          <li><a href="../#approach">Our approach</a></li>
+          <li><a href="../#services">Services</a></li>
+          <li><a href="../#journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Work with us</h3>
+        <ul>
+          <li><a href="../book/">Book a session</a></li>
+          <li><a href="../contact/">Contact us</a></li>
+          <li><a href="../#services">School programs</a></li>
+          <li><a href="../#services">Church &amp; community</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Stay close</h3>
+        <ul>
+          <li><a href="mailto:hello@roboratherapy.com">hello@roboratherapy.com</a></li>
+          <li><a href="../contact/">Instagram</a></li>
+          <li><a href="../contact/">LinkedIn</a></li>
+          <li><a href="../accessibility/">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Robora Therapy Solutions. <a href="../privacy/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Privacy</a> · <a href="../terms/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Terms</a> · <a href="../confidentiality/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Confidentiality</a></span>
+      <span class="scrip">“Beloved, I wish above all things that thou mayest prosper and be in health.” — 3 John 1:2</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="../assets/js/robora.js"></script>
+</body>
+</html>

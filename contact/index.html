@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Contact · Robora Therapy Solutions</title>
+<meta name="description" content="Reach Robora for partnerships, press, school programs, speaking, or anything that does not fit a booking form.">
+<meta name="theme-color" content="#1f3322">
+<link rel="icon" type="image/png" href="../assets/img/logo-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Contact · Robora Therapy Solutions">
+<meta property="og:description" content="Reach Robora for partnerships, press, school programs, speaking, or anything that does not fit a booking form.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/img/joanne.jpg">
+
+<!-- Fonts: Fraunces (display), Inter Tight (body), Caveat (handwritten accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/robora.css">
+</head>
+<body>
+
+<a href="#main" class="sr-only">Skip to main content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../" class="nav-brand" aria-label="Robora Therapy Solutions, home">
+      <img src="../assets/img/logo-icon.png" alt="">
+      <span class="wm">Robora<i>.</i></span>
+    </a>
+  </div>
+</nav>
+
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+<div class="nav-links" id="navLinks">
+  <a href="../about/">About</a>
+  <a href="../#approach">Approach</a>
+  <a href="../#services">Services</a>
+  <a href="../#journal">Journal</a>
+  <a href="../book/" class="btn btn-primary nav-cta">Book a session</a>
+  <div class="nav-drawer-foot">Rooted in love. Restored by grace.</div>
+</div>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<main id="main">
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Reach out</span>
+    <h1 class="reveal in">Let's <em>talk</em>.</h1>
+    <p class="lede reveal in">For partnerships, press, speaking, school programs, or anything that does not quite fit a booking form — write to us here.</p>
+  </div>
+</section>
+
+<section class="section-tight" style="padding-top:0;">
+  <div class="container split">
+    <div class="reveal">
+      <h2 style="font-size:clamp(28px,3vw,36px);margin-bottom:20px;">Whom we hear from</h2>
+      <p style="color:var(--bark);margin-bottom:32px;">Most messages come from one of these places. Tell us which is closest to yours, and we will route you to the right conversation.</p>
+
+      <dl class="meta-list">
+        <div>
+          <dt>Booking</dt>
+          <dd>For session inquiries, please use the booking form.<small><a href="../book/">Book a session →</a></small></dd>
+        </div>
+        <div>
+          <dt>Schools</dt>
+          <dd>Counselling programs, staff training, and pastoral consultation.<small>Tell us your school size and what you have tried so far.</small></dd>
+        </div>
+        <div>
+          <dt>Churches</dt>
+          <dd>Family workshops, parent groups, and pastoral partnerships.<small>We work across denominations.</small></dd>
+        </div>
+        <div>
+          <dt>Press &amp; speaking</dt>
+          <dd>Joanne speaks on trauma-informed practice, family healing, and the meeting place of education and counselling.<small>Please include outlet, date, and audience.</small></dd>
+        </div>
+        <div>
+          <dt>Direct</dt>
+          <dd><a href="mailto:hello@roboratherapy.com">hello@roboratherapy.com</a><small>If you would rather skip the form.</small></dd>
+        </div>
+      </dl>
+    </div>
+
+    <form class="form-card reveal" onsubmit="window.handleFormStub(event, 'Sent · we will reply within one working day');">
+      <h2>Send a message</h2>
+      <p class="sub">All fields are read by a person, not a robot.</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="cname">Name <span class="required">*</span></label>
+          <input id="cname" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="cemail">Email <span class="required">*</span></label>
+          <input id="cemail" name="email" type="email" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ctype">I'm writing about</label>
+        <select id="ctype" name="type">
+          <option value="general">Something else</option>
+          <option value="school">A school inquiry</option>
+          <option value="church">A church or community partnership</option>
+          <option value="press">Press or media</option>
+          <option value="speaking">A speaking engagement</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="cmsg">Your note <span class="required">*</span></label>
+        <textarea id="cmsg" name="message" required placeholder="No detail too small. We read every message."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message <span class="arrow">→</span></button>
+      <p class="small">By sending, you agree to our <a href="../privacy/" style="border-bottom:1px solid var(--gold);color:inherit;">privacy policy</a>. We never share your details.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">Robora<i>.</i></div>
+        <p>A holistic counselling and emotional wellness practice. Helping children, teens, and families heal, grow, and thrive — one root at a time.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Practice</h3>
+        <ul>
+          <li><a href="../about/">About Joanne</a></li>
+          <li><a href="../#approach">Our approach</a></li>
+          <li><a href="../#services">Services</a></li>
+          <li><a href="../#journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Work with us</h3>
+        <ul>
+          <li><a href="../book/">Book a session</a></li>
+          <li><a href="../contact/">Contact us</a></li>
+          <li><a href="../#services">School programs</a></li>
+          <li><a href="../#services">Church &amp; community</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Stay close</h3>
+        <ul>
+          <li><a href="mailto:hello@roboratherapy.com">hello@roboratherapy.com</a></li>
+          <li><a href="../contact/">Instagram</a></li>
+          <li><a href="../contact/">LinkedIn</a></li>
+          <li><a href="../accessibility/">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Robora Therapy Solutions. <a href="../privacy/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Privacy</a> · <a href="../terms/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Terms</a> · <a href="../confidentiality/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Confidentiality</a></span>
+      <span class="scrip">“Beloved, I wish above all things that thou mayest prosper and be in health.” — 3 John 1:2</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="../assets/js/robora.js"></script>
+</body>
+</html>

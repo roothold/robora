@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Book a session · Robora Therapy Solutions</title>
+<meta name="description" content="Book a free 20-minute call with Joanne. Three small questions, one minute. We reply within one working day.">
+<meta name="theme-color" content="#1f3322">
+<link rel="icon" type="image/png" href="../assets/img/logo-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Book a session · Robora Therapy Solutions">
+<meta property="og:description" content="Book a free 20-minute call with Joanne. Three small questions, one minute. We reply within one working day.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/img/joanne.jpg">
+
+<!-- Fonts: Fraunces (display), Inter Tight (body), Caveat (handwritten accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/robora.css">
+</head>
+<body>
+
+<a href="#main" class="sr-only">Skip to main content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="../" class="nav-brand" aria-label="Robora Therapy Solutions, home">
+      <img src="../assets/img/logo-icon.png" alt="">
+      <span class="wm">Robora<i>.</i></span>
+    </a>
+  </div>
+</nav>
+
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+<div class="nav-links" id="navLinks">
+  <a href="../about/">About</a>
+  <a href="../#approach">Approach</a>
+  <a href="../#services">Services</a>
+  <a href="../#journal">Journal</a>
+  <a href="../book/" class="btn btn-primary nav-cta">Book a session</a>
+  <div class="nav-drawer-foot">Rooted in love. Restored by grace.</div>
+</div>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<main id="main">
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Begin gently</span>
+    <h1 class="reveal in">Book a <em>session</em>.</h1>
+    <p class="lede reveal in">Three small questions, one minute. We reply personally — usually within one working day.</p>
+  </div>
+</section>
+
+<section class="section-tight" style="padding-top:0;">
+  <div class="container">
+    <form id="bookForm" class="form-card reveal" onsubmit="window.handleFormStub(event, 'Request received · we will reply within one working day'); window.location.href='thanks/';">
+      <div class="step-dots" aria-hidden="true" style="display:flex;justify-content:center;gap:8px;margin-bottom:32px;">
+        <span class="is-active" style="width:8px;height:8px;border-radius:50%;background:var(--moss-deep);transition:all .3s;"></span>
+        <span style="width:8px;height:8px;border-radius:50%;background:rgba(58,42,28,0.18);transition:all .3s;"></span>
+        <span style="width:8px;height:8px;border-radius:50%;background:rgba(58,42,28,0.18);transition:all .3s;"></span>
+      </div>
+
+      <!-- STEP 1: Who is this for? -->
+      <div class="step is-active" data-step="1">
+        <h2 style="font-size:clamp(24px,2.6vw,32px);margin-bottom:6px;">Who is this for?</h2>
+        <p class="sub">So we can route your inquiry to the right room.</p>
+        <div class="option-tiles" role="radiogroup" aria-label="Who is the session for?">
+          <label class="option-tile"><input type="radio" name="who" value="child" required> My child <small style="display:block;opacity:0.7;font-size:13px;margin-top:2px;">Ages 6–12</small></label>
+          <label class="option-tile"><input type="radio" name="who" value="teen"> My teenager <small style="display:block;opacity:0.7;font-size:13px;margin-top:2px;">Ages 13–18</small></label>
+          <label class="option-tile"><input type="radio" name="who" value="self"> Myself <small style="display:block;opacity:0.7;font-size:13px;margin-top:2px;">Adult counselling</small></label>
+          <label class="option-tile"><input type="radio" name="who" value="family"> Our family <small style="display:block;opacity:0.7;font-size:13px;margin-top:2px;">Parents and child together</small></label>
+          <label class="option-tile"><input type="radio" name="who" value="school"> A school <small style="display:block;opacity:0.7;font-size:13px;margin-top:2px;">Programs &amp; staff</small></label>
+          <label class="option-tile"><input type="radio" name="who" value="church"> A church <small style="display:block;opacity:0.7;font-size:13px;margin-top:2px;">Community partnership</small></label>
+        </div>
+        <button type="button" class="btn btn-primary" data-next>Continue <span class="arrow">→</span></button>
+      </div>
+
+      <!-- STEP 2: What's drawing you here? -->
+      <div class="step" data-step="2" style="display:none;">
+        <h2 style="font-size:clamp(24px,2.6vw,32px);margin-bottom:6px;">What's drawing you here?</h2>
+        <p class="sub">A few words is enough. We can talk it through on the call.</p>
+        <div class="field">
+          <label for="concern">In your own words</label>
+          <textarea id="concern" name="concern" required placeholder="No detail too small. What you write here only goes to Joanne."></textarea>
+        </div>
+        <div class="field">
+          <label for="format">Preferred format</label>
+          <select id="format" name="format" required>
+            <option value="">Please choose…</option>
+            <option value="online">Online video session</option>
+            <option value="in-person">In-person (Lagos)</option>
+            <option value="either">Either, no preference</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <button type="button" class="btn btn-ghost" data-prev style="flex:0 0 auto;padding-left:16px;padding-right:16px;">← Back</button>
+          <button type="button" class="btn btn-primary" data-next style="flex:1;">Continue <span class="arrow">→</span></button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Contact -->
+      <div class="step" data-step="3" style="display:none;">
+        <h2 style="font-size:clamp(24px,2.6vw,32px);margin-bottom:6px;">How should we reach you?</h2>
+        <p class="sub">We will reply personally within one working day.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="fname">First name <span class="required">*</span></label>
+            <input id="fname" name="fname" type="text" required>
+          </div>
+          <div class="field">
+            <label for="lname">Last name</label>
+            <input id="lname" name="lname" type="text">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email <span class="required">*</span></label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone or WhatsApp <span style="opacity:0.6">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" placeholder="+234…">
+        </div>
+        <div class="field">
+          <label for="when">When works best?</label>
+          <select id="when" name="when">
+            <option value="weekday-mornings">Weekday mornings</option>
+            <option value="weekday-afternoons">Weekday afternoons</option>
+            <option value="weekday-evenings">Weekday evenings</option>
+            <option value="saturday">Saturday</option>
+            <option value="flexible">I'm flexible</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <button type="button" class="btn btn-ghost" data-prev style="flex:0 0 auto;padding-left:16px;padding-right:16px;">← Back</button>
+          <button type="submit" class="btn btn-primary" style="flex:1;">Send my request <span class="arrow">→</span></button>
+        </div>
+        <p class="small">By sending, you agree to our <a href="../privacy/" style="border-bottom:1px solid var(--gold);color:inherit;">privacy policy</a>. We never share your details.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+  .step{ display:none; }
+  .step.is-active{ display:block; }
+  .step-dots span.is-done{ background:var(--gold) !important; }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => window.initStepForm('bookForm'));
+</script>
+
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">Robora<i>.</i></div>
+        <p>A holistic counselling and emotional wellness practice. Helping children, teens, and families heal, grow, and thrive — one root at a time.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Practice</h3>
+        <ul>
+          <li><a href="../about/">About Joanne</a></li>
+          <li><a href="../#approach">Our approach</a></li>
+          <li><a href="../#services">Services</a></li>
+          <li><a href="../#journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Work with us</h3>
+        <ul>
+          <li><a href="../book/">Book a session</a></li>
+          <li><a href="../contact/">Contact us</a></li>
+          <li><a href="../#services">School programs</a></li>
+          <li><a href="../#services">Church &amp; community</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Stay close</h3>
+        <ul>
+          <li><a href="mailto:hello@roboratherapy.com">hello@roboratherapy.com</a></li>
+          <li><a href="../contact/">Instagram</a></li>
+          <li><a href="../contact/">LinkedIn</a></li>
+          <li><a href="../accessibility/">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Robora Therapy Solutions. <a href="../privacy/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Privacy</a> · <a href="../terms/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Terms</a> · <a href="../confidentiality/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Confidentiality</a></span>
+      <span class="scrip">“Beloved, I wish above all things that thou mayest prosper and be in health.” — 3 John 1:2</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="../assets/js/robora.js"></script>
+</body>
+</html>

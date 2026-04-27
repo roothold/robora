@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Robora Therapy Solutions — Where healing meets growth</title>
+<meta name="description" content="Robora Therapy Solutions is a holistic counselling and emotional wellness practice helping children, teens, and families heal, grow, and thrive. Founded by Joanne Aluko." />
+<!-- Fonts: Fraunces (display, soulful serif) + Inter Tight (clean modern sans) + Caveat (handwritten accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+
+
+<meta name="description" content="Robora Therapy Solutions — a holistic counselling practice for children, teens, and families. Online and in-person sessions across Lagos, Nigeria.">
+<meta name="theme-color" content="#1f3322">
+<link rel="icon" type="image/png" href="assets/img/logo-icon.png">
+
+<meta property="og:title" content="Robora Therapy Solutions · Where healing & growth take root">
+<meta property="og:description" content="A holistic counselling practice for children, teens, and families. Online and in-person sessions across Lagos, Nigeria.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/joanne.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/robora.css">
+</head>
+<body>
+<a href="#main" class="sr-only">Skip to main content</a>
+
+<!-- ═══════════════════════════════════════════════
+     NAV
+     ═══════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#main" class="nav-brand" aria-label="Robora Therapy Solutions, home">
+      <img src="assets/img/logo-icon.png" alt="" />
+      <span class="wm">Robora<i>.</i></span>
+    </a>
+  </div>
+</nav>
+<!-- Toggle, drawer, and backdrop ALL live OUTSIDE <nav> so they escape the nav's stacking context. -->
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+<div class="nav-links" id="navLinks">
+  <a href="about/">About</a>
+  <a href="#approach">Approach</a>
+  <a href="#services">Services</a>
+  <a href="#journal">Journal</a>
+  <a href="book/" class="btn btn-primary nav-cta">Book a session</a>
+  <div class="nav-drawer-foot">Rooted in love. Restored by grace.</div>
+</div>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow hero-eyebrow reveal">Counselling · Coaching · Family Healing</span>
+      <h1 class="reveal">
+        Where healing
+        <span class="ampersand">&amp;</span>
+        <em>growth</em>
+        take root.
+      </h1>
+      <p class="hero-sub reveal">
+        Robora Therapy Solutions is a sanctuary for children, teens, and families.
+        We help you move beyond the behaviour, into the story — and out the other side
+        whole, grounded, and free to bloom.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="book/" class="btn btn-primary">
+          Book a session
+          <span class="arrow">→</span>
+        </a>
+        <a href="#approach" class="btn btn-ghost">
+          Our approach
+        </a>
+      </div>
+      <div class="hero-meta reveal">
+        <div><strong>10+ yrs</strong>Educator &amp; counsellor experience</div>
+        <div><strong>Ages 6–18</strong>Children, teens &amp; families</div>
+        <div><strong>Online + In-person</strong>Schools, churches, homes</div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="frame"></div>
+
+      <!-- Inline SVG tree (organic, hand-drawn feel) -->
+      <svg class="tree" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- canopy halo -->
+        <ellipse cx="200" cy="170" rx="170" ry="150" fill="#6a8a52" opacity="0.18"/>
+
+        <!-- canopy clusters -->
+        <g fill="#3d6440">
+          <circle cx="120" cy="150" r="62"/>
+          <circle cx="200" cy="100" r="72"/>
+          <circle cx="280" cy="150" r="62"/>
+          <circle cx="160" cy="200" r="58"/>
+          <circle cx="240" cy="200" r="58"/>
+          <circle cx="200" cy="170" r="70"/>
+        </g>
+        <g fill="#5a7a5d" opacity="0.85">
+          <circle cx="100" cy="180" r="40"/>
+          <circle cx="300" cy="180" r="40"/>
+          <circle cx="200" cy="80" r="44"/>
+          <circle cx="150" cy="120" r="34"/>
+          <circle cx="250" cy="120" r="34"/>
+        </g>
+
+        <!-- highlights (gold-touched leaves) -->
+        <g fill="#a87a32" opacity="0.55">
+          <circle cx="135" cy="135" r="6"/>
+          <circle cx="265" cy="135" r="6"/>
+          <circle cx="200" cy="60" r="5"/>
+          <circle cx="190" cy="220" r="4"/>
+          <circle cx="220" cy="225" r="4"/>
+        </g>
+
+        <!-- trunk -->
+        <path d="M200 230
+                 C 195 270, 215 290, 200 320
+                 C 185 350, 220 380, 200 420
+                 C 200 440, 200 460, 200 480"
+              stroke="#3a2a1c" stroke-width="22" fill="none" stroke-linecap="round"/>
+
+        <!-- branches -->
+        <path d="M200 250 C 175 240, 155 230, 130 200" stroke="#3a2a1c" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M200 250 C 225 240, 245 230, 270 200" stroke="#3a2a1c" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M200 220 C 190 200, 185 180, 200 150" stroke="#3a2a1c" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M200 290 C 170 290, 145 270, 130 240" stroke="#3a2a1c" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M200 290 C 230 290, 255 270, 270 240" stroke="#3a2a1c" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+        <!-- roots -->
+        <g stroke="#3a2a1c" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85">
+          <path d="M200 470 C 175 470, 155 478, 135 488"/>
+          <path d="M200 470 C 225 470, 245 478, 265 488"/>
+          <path d="M200 470 C 200 480, 200 488, 200 495"/>
+          <path d="M200 470 C 180 470, 165 478, 150 492"/>
+          <path d="M200 470 C 220 470, 235 478, 250 492"/>
+        </g>
+
+        <!-- ground line -->
+        <path d="M70 478 Q 200 488 330 478" stroke="#3a2a1c" stroke-width="1" opacity="0.3" fill="none"/>
+      </svg>
+
+      <span class="badge b1">safe space <i>·</i> warm</span>
+      <span class="badge b2">rooted in <i>love</i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT
+     ═══════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-portrait reveal">
+      <span class="frame-mark">est. with love</span>
+      <img class="portrait-photo" src="assets/img/joanne.jpg" alt="Portrait of Joanne Aluko, founder of Robora Therapy Solutions" />
+      <div class="name-tag">
+        <div class="n">Joanne Aluko</div>
+        <div class="r">Founder · Family Therapist</div>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <span class="eyebrow">A note from the founder</span>
+      <h2>The eye of an educator. The <em>heart</em> of a counsellor.</h2>
+      <p class="lede">
+        “I started Robora because I realised that no wealth could mask trauma. When children
+        act out or withdraw, it is the pain inside speaking — and that pain has a name, a story,
+        and a way home.”
+      </p>
+      <p>
+        Robora draws its meaning from the Latin <em>roborare</em> — to strengthen.
+        After more than a decade in classrooms across nations, I trained as a counsellor
+        to help children and families unlock the strength I always saw was there. Like the oak
+        whose roots run deep, every person carries an unspoken resilience waiting to be stirred.
+      </p>
+      <p>
+        My work is the meeting place of education and emotional healing — a calm,
+        soothing, safe place where families restore connection, and children rise into
+        the truest version of themselves.
+      </p>
+      <div class="about-sig">— Joanne</div>
+      <div class="role">CERTIFIED EDUCATOR &amp; FAMILY THERAPIST</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ROOTS / PILLARS
+     ═══════════════════════════════════════════════ -->
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="roots-head">
+      <div class="reveal">
+        <span class="eyebrow">The four roots of Robora</span>
+        <h2>What we believe — and how we <em>walk with you</em>.</h2>
+      </div>
+      <p class="reveal">
+        Healing is not just about fixing what is broken. It is about restoring the wholeness
+        already within. Four roots hold every session, every family, every story we touch.
+      </p>
+    </div>
+
+    <div class="roots-grid">
+      <article class="root reveal">
+        <div class="num">i.</div>
+        <h3>Wholeness</h3>
+        <p class="core">Healing begins when mind, body, and soul are nurtured together.</p>
+        <p>We don't just treat symptoms. We help you rediscover peace, purpose, and self-worth.</p>
+      </article>
+
+      <article class="root reveal">
+        <div class="num">ii.</div>
+        <h3>Strength</h3>
+        <p class="core">The oak symbolises inner resilience — what's broken can grow stronger again.</p>
+        <p>In every child, family, and parent lies an unspoken strength waiting to be awakened.</p>
+      </article>
+
+      <article class="root reveal">
+        <div class="num">iii.</div>
+        <h3>Connection</h3>
+        <p class="core">Families thrive when love replaces fear, and communication replaces silence.</p>
+        <p>We rebuild relationships that reflect safety, trust, and belonging.</p>
+      </article>
+
+      <article class="root reveal">
+        <div class="num">iv.</div>
+        <h3>Grace</h3>
+        <p class="core">Healing is a journey of restoration — guided by compassion, not pressure.</p>
+        <p>We walk with you patiently, believing every soul deserves a chance to bloom again.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SERVICES
+     ═══════════════════════════════════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-head">
+      <div class="reveal">
+        <span class="eyebrow">Services &amp; specialisms</span>
+        <h2>Quiet, considered support — for every <em>season</em>.</h2>
+      </div>
+      <p class="reveal">
+        Each of our offerings is a different kind of doorway. Whatever you carry, there is a way in —
+        and a way through.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service reveal">
+        <div class="icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-4.5-7-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-7 11-7 11"/>
+          </svg>
+        </div>
+        <h3>Trauma &amp; Emotional Healing</h3>
+        <p>Gentle, evidence-based therapy for inner-child wounds, grief, anxiety, and the silent emotions that shape identity.</p>
+        <span class="age">Children · Teens · Adults</span>
+      </article>
+
+      <article class="service featured reveal">
+        <div class="icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9c-2 0-4-.7-5.5-1.8L3 21l1.8-3.5C3.7 16 3 14 3 12z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3>Play &amp; Creative Therapy</h3>
+        <p>Where words fall short, play speaks. Storytelling, art, and sand-tray work help children show what they cannot yet say.</p>
+        <span class="age">Ages 6 – 12</span>
+      </article>
+
+      <article class="service reveal">
+        <div class="icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+            <circle cx="9" cy="8" r="3.5"/>
+            <path d="M16 3.5a3.5 3.5 0 0 1 0 7"/>
+            <path d="M21 21v-1.5a3.5 3.5 0 0 0-3-3.5"/>
+          </svg>
+        </div>
+        <h3>Counselling for Teens in Transition</h3>
+        <p>Identity, exam pressure, friendships, faith, the future. A safe room for adolescents finding their feet.</p>
+        <span class="age">Ages 13 – 18</span>
+      </article>
+
+      <article class="service reveal">
+        <div class="icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12h6l2-3 4 6 2-3h6"/>
+          </svg>
+        </div>
+        <h3>Behavioural &amp; Emotional Regulation</h3>
+        <p>Practical, family-friendly tools for big feelings — meltdowns, withdrawal, defiance, anxiety. Calm, grounded strategies that last.</p>
+        <span class="age">Children &amp; Caregivers</span>
+      </article>
+
+      <article class="service reveal">
+        <div class="icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+            <path d="M8 8h8M8 12h8M8 16h5"/>
+          </svg>
+        </div>
+        <h3>School Counselling &amp; Psycho-educational Support</h3>
+        <p>Workshops, assessments, and on-site programs that help schools care for the whole child — not just the report card.</p>
+        <span class="age">Schools · Educators</span>
+      </article>
+
+      <article class="service reveal">
+        <div class="icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <h3>Social Skills &amp; Self-Esteem</h3>
+        <p>Confidence-building groups and one-on-one sessions for children who feel unseen, anxious, or out of step.</p>
+        <span class="age">Ages 8 – 16</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     AUDIENCES
+     ═══════════════════════════════════════════════ -->
+<section class="audiences">
+  <div class="container">
+    <div class="aud-head">
+      <span class="eyebrow reveal">Who Robora is for</span>
+      <h2 class="reveal">A practice built for those who carry — and those they <em>carry</em>.</h2>
+    </div>
+
+    <div class="aud-grid">
+      <div class="aud reveal">
+        <div class="ring">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="7" r="3"/>
+            <circle cx="17" cy="9" r="2.5"/>
+            <path d="M2 20c0-3 3-5.5 7-5.5s7 2.5 7 5.5"/>
+            <path d="M14 20c0-2.2 2-4 4-4s4 1.8 4 4"/>
+          </svg>
+        </div>
+        <h3>Families</h3>
+        <p>Restoring connection where silence or conflict has settled in.</p>
+      </div>
+
+      <div class="aud reveal">
+        <div class="ring">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M5 21c0-4 3-7 7-7s7 3 7 7"/>
+          </svg>
+        </div>
+        <h3>Children &amp; Teens</h3>
+        <p>Ages 6–18. Safe rooms for the stories they cannot yet name.</p>
+      </div>
+
+      <div class="aud reveal">
+        <div class="ring">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21V8l9-5 9 5v13"/>
+            <path d="M9 21v-7h6v7"/>
+          </svg>
+        </div>
+        <h3>Schools</h3>
+        <p>On-site programs, workshops, and pastoral training for staff.</p>
+      </div>
+
+      <div class="aud reveal">
+        <div class="ring">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v18"/>
+            <path d="M8 7h8"/>
+            <path d="M5 21h14"/>
+            <path d="M7 21V11l5-4 5 4v10"/>
+          </svg>
+        </div>
+        <h3>Churches &amp; Communities</h3>
+        <p>Faith-aligned support that honours both clinical care and conviction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     APPROACH
+     ═══════════════════════════════════════════════ -->
+<section class="approach">
+  <div class="container approach-grid">
+    <div class="approach-content reveal">
+      <span class="eyebrow">How we work together</span>
+      <h2>A path that honours your <em>pace</em>.</h2>
+      <p>
+        Every Robora journey is shaped to the person in front of us. We blend clinical insight
+        with classroom wisdom — and, where it is welcomed, with a quiet thread of faith.
+      </p>
+      <p>
+        No two stories are the same. But the rhythm of the work tends to look like this:
+      </p>
+      <ol class="approach-list">
+        <li>A free 20-minute call to listen, understand, and name what you are carrying.</li>
+        <li>An intake session to map history, hopes, and the shape of the road ahead.</li>
+        <li>A tailored plan — weekly or fortnightly — drawing from trauma-informed and creative therapies.</li>
+        <li>Family or school check-ins where helpful, so healing is held by more than one set of hands.</li>
+        <li>A gentle close, with tools you keep, for the seasons that come after.</li>
+      </ol>
+    </div>
+
+    <figure class="pull-quote reveal">
+      <blockquote>Behind every leader, artist, and innovator was once a child who needed to be seen. We help families see, before the wounds become inheritances.</blockquote>
+      <figcaption class="src">
+        <strong>Joanne Aluko</strong>
+        Founder · Robora Therapy Solutions
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     JOURNAL
+     ═══════════════════════════════════════════════ -->
+<section class="journal" id="journal">
+  <div class="container">
+    <div class="journal-head">
+      <div class="reveal">
+        <span class="eyebrow">From the journal</span>
+        <h2>Quiet writing on healing, parenting, &amp; <em>generational</em> grace.</h2>
+      </div>
+      <a href="contact/" class="btn btn-ghost reveal" style="background: transparent; color: var(--ivory); border-color: rgba(247,242,232,0.3);">All entries →</a>
+    </div>
+
+    <div class="journal-grid">
+      <article class="post post-1 reveal">
+        <div class="img"></div>
+        <div class="meta">Reflections · 6 min read</div>
+        <h3>Behind every high-functioning adult is a child who never got to be one.</h3>
+        <p>On firstborn responsibility, people-pleasing, and the quiet trauma of homes that were never emotionally safe.</p>
+      </article>
+
+      <article class="post post-2 reveal">
+        <div class="img"></div>
+        <div class="meta">Practice · 4 min read</div>
+        <h3>The eye of an educator, the heart of a counsellor.</h3>
+        <p>What over a decade in classrooms taught me about the patterns adults miss — and how to read the story behind the behaviour.</p>
+      </article>
+
+      <article class="post post-3 reveal">
+        <div class="img"></div>
+        <div class="meta">For parents · 5 min read</div>
+        <h3>Protection, not perfection.</h3>
+        <p>You do not have to be a flawless parent. You do have to be a safe one. A note on the gift you can still give.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT
+     ═══════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Begin gently</span>
+      <h2>Take the <em>first</em> step.</h2>
+      <p class="lede">
+        Whether you are a parent, a teen, a school, or a faith community —
+        reach out. We will reply personally, usually within one working day.
+      </p>
+
+      <dl class="contact-list">
+        <div>
+          <dt>Email</dt>
+          <dd>
+            <a href="mailto:hello@roboratherapy.com">hello@roboratherapy.com</a>
+            <small>For booking, partnerships &amp; press</small>
+          </dd>
+        </div>
+        <div>
+          <dt>Sessions</dt>
+          <dd>
+            Online · In-person · School-based
+            <small>NGN 50,000 per session · packages available</small>
+          </dd>
+        </div>
+        <div>
+          <dt>Hours</dt>
+          <dd>
+            Mon – Fri · 9:00 – 17:00 WAT
+            <small>Saturday slots by request</small>
+          </dd>
+        </div>
+        <div>
+          <dt>Follow</dt>
+          <dd>
+            <a href="contact/">Instagram</a> · <a href="contact/">LinkedIn</a>
+            <small>@roboratherapy</small>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+      <h3>Request a free 20-min call</h3>
+      <p class="sub">A short, no-pressure conversation to see if Robora is right for you.</p>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fname">First name</label>
+          <input id="fname" name="fname" type="text" required />
+        </div>
+        <div class="field">
+          <label for="lname">Last name</label>
+          <input id="lname" name="lname" type="text" required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div class="field">
+        <label for="who">Who is this for?</label>
+        <select id="who" name="who" required>
+          <option value="">Please choose…</option>
+          <option>My child (6–12)</option>
+          <option>My teenager (13–18)</option>
+          <option>Myself / family</option>
+          <option>A school / institution</option>
+          <option>A church / community</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="msg">A few words on what you are carrying</label>
+        <textarea id="msg" name="msg" rows="4" placeholder="No detail too small. We read every note."></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Send with care
+        <span class="arrow">→</span>
+      </button>
+      <div class="small">By sending, you agree to our gentle, no-spam follow-up. We never share your details.</div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="wm">Robora<i>.</i></div>
+        <p>
+          A holistic counselling and emotional wellness practice. Helping children, teens,
+          and families heal, grow, and thrive — one root at a time.
+        </p>
+      </div>
+
+      <div class="foot-col">
+        <h3>Practice</h3>
+        <ul>
+          <li><a href="about/">About Joanne</a></li>
+          <li><a href="#approach">Our approach</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#journal">Journal</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h3>Work with us</h3>
+        <ul>
+          <li><a href="book/">Book a session</a></li>
+          <li><a href="#contact">School programs</a></li>
+          <li><a href="#contact">Church &amp; community</a></li>
+          <li><a href="#contact">Speaking</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h3>Stay close</h3>
+        <ul>
+          <li><a href="mailto:hello@roboratherapy.com">hello@roboratherapy.com</a></li>
+          <li><a href="contact/">Instagram</a></li>
+          <li><a href="contact/">LinkedIn</a></li>
+          <li><a href="contact/">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bot">
+      <span>© 2026 Robora Therapy Solutions. <a href="privacy/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Privacy</a> · <a href="terms/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Terms</a> · <a href="confidentiality/" style="color:inherit;border-bottom:1px solid rgba(247,242,232,0.3)">Confidentiality</a></span>
+      <span class="scrip">“Beloved, I wish above all things that thou mayest prosper and be in health.” — 3 John 1:2</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="assets/js/robora.js"></script>
+</body>
+</html>
