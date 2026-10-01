@@ -11,6 +11,7 @@
 :root {
   --moss: #35654d;
   --moss-deep: #26473a;
+  --moss-darker: #1a3328;
   --moss-light: #6b8c7a;
   --gold: #d4af37;
   --gold-text: #a67e18;
@@ -704,7 +705,7 @@ p { color: var(--ink-soft); line-height: 1.65; }
 
 /* FOOTER */
 .footer {
-  background: var(--moss-deep);
+  background: var(--moss-darker);
   color: rgba(250, 249, 246, 0.75);
   padding: var(--space-7) 0 var(--space-4);
 }
