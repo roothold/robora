@@ -1,20 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f2eee2"/>
-      <stop offset="100%" stop-color="#e8dec5"/>
+    <linearGradient id="cbg" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#f4e9d8"/>
+      <stop offset="60%" stop-color="#e8d5b7"/>
+      <stop offset="100%" stop-color="#c9a888"/>
     </linearGradient>
+    <radialGradient id="csun" cx="50%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#f4e9d8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f4e9d8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cgrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="11"/>
+      <feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0.05 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
   </defs>
-  <rect width="1000" height="700" fill="url(#bg)"/>
-  <g transform="translate(500.0,350.0)" opacity="0.14">
-      <!-- Canopy: layered organic blobs -->
-      <ellipse cx="0" cy="-29.400000000000002" rx="88.20000000000002" ry="73.50000000000001" fill="#35654d"/>
-      <ellipse cx="-49.00000000000001" cy="-9.800000000000002" rx="49.00000000000001" ry="44.10000000000001" fill="#35654d"/>
-      <ellipse cx="49.00000000000001" cy="-9.800000000000002" rx="49.00000000000001" ry="44.10000000000001" fill="#35654d"/>
-      <!-- Trunk -->
-      <rect x="-7.840000000000002" y="14.700000000000001" width="15.680000000000003" height="63.70000000000001" fill="#35654d" opacity="0.85"/>
-      <!-- Roots suggestion -->
-      <path d="M 0 78.40000000000002 Q -29.400000000000002 88.20000000000002, -49.00000000000001 93.10000000000001 M 0 78.40000000000002 Q 29.400000000000002 88.20000000000002, 49.00000000000001 93.10000000000001"
-            stroke="#35654d" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
-    </g>
+  <rect width="1000" height="700" fill="url(#cbg)"/>
+  <rect width="1000" height="700" fill="url(#csun)"/>
+  
+  <!-- Windowsill horizontal line -->
+  <rect x="0" y="455.0" width="1000" height="28.0" fill="#8a6b4c" opacity="0.4"/>
+  
+  <!-- Mug suggestion -->
+  <g opacity="0.75">
+    <ellipse cx="450.0" cy="385.00000000000006" rx="80.0" ry="14.0" fill="#8a6b4c" opacity="0.5"/>
+    <path d="M 370.0 385.00000000000006 L 370.0 455.0 Q 370.0 476.00000000000006, 400.0 476.00000000000006 L 500.0 476.00000000000006 Q 530.0 476.00000000000006, 530.0 455.0 L 530.0 385.00000000000006 Z"
+          fill="#f4e9d8" opacity="0.6"/>
+    <!-- Handle -->
+    <path d="M 530.0 406.0 Q 580.0 406.0, 580.0 427.0 Q 580.0 448.0, 530.0 448.0" 
+          stroke="#f4e9d8" stroke-width="3" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- Small vase + sprig -->
+  <g opacity="0.7" transform="translate(620.0,350.0)">
+    <rect x="-6" y="10" width="12" height="15" fill="#f4e9d8" opacity="0.6"/>
+    <path d="M 0 10 Q -3 -10, 0 -25" stroke="#3f5a3f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 0 10 Q 4 -5, 10 -20" stroke="#3f5a3f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 0 10 Q -4 -8, -8 -22" stroke="#3f5a3f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <rect width="1000" height="700" filter="url(#cgrain)" opacity="0.45"/>
 </svg>

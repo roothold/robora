@@ -1,20 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f2eee2"/>
-      <stop offset="100%" stop-color="#e8dec5"/>
+    <linearGradient id="aubg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4e9d8"/>
+      <stop offset="60%" stop-color="#e8d5b7"/>
+      <stop offset="100%" stop-color="#8a6b4c"/>
     </linearGradient>
+    <radialGradient id="ausun" cx="25%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#f4e9d8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f4e9d8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="aupleat" x="0" y="0" width="60" height="100" patternUnits="userSpaceOnUse">
+      <line x1="30" y1="0" x2="30" y2="100" stroke="#c9a888" stroke-width="2" opacity="0.1"/>
+    </pattern>
+    <filter id="augrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0.05 0"/>
+    </filter>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <g transform="translate(600.0,450.0)" opacity="0.14">
-      <!-- Canopy: layered organic blobs -->
-      <ellipse cx="0" cy="-37.800000000000004" rx="113.40000000000002" ry="94.50000000000001" fill="#35654d"/>
-      <ellipse cx="-63.00000000000001" cy="-12.600000000000001" rx="63.00000000000001" ry="56.70000000000001" fill="#35654d"/>
-      <ellipse cx="63.00000000000001" cy="-12.600000000000001" rx="63.00000000000001" ry="56.70000000000001" fill="#35654d"/>
-      <!-- Trunk -->
-      <rect x="-10.080000000000002" y="18.900000000000002" width="20.160000000000004" height="81.9" fill="#35654d" opacity="0.85"/>
-      <!-- Roots suggestion -->
-      <path d="M 0 100.80000000000001 Q -37.800000000000004 113.40000000000002, -63.00000000000001 119.7 M 0 100.80000000000001 Q 37.800000000000004 113.40000000000002, 63.00000000000001 119.7"
-            stroke="#35654d" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
+  
+  <rect width="1600" height="1000" fill="url(#aubg)"/>
+  <rect width="1600" height="1000" fill="url(#aupleat)"/>
+  <rect width="1600" height="1000" fill="url(#ausun)"/>
+  
+  <!-- Large plant on left -->
+  <g opacity="0.72" transform="translate(240.0,550.0)">
+    <path d="M -50 150 L 50 150 L 70 250 L -70 250 Z" fill="#8a6b4c" opacity="0.75"/>
+    <g>
+      <path d="M 0 140 Q -40 50, -90 -40 Q -110 -120, -90 -180" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 0 140 Q -15 50, -30 -60 Q -40 -150, -20 -220" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 0 140 Q 10 40, 20 -70 Q 30 -170, 50 -240" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 0 140 Q 40 60, 90 -20 Q 130 -80, 150 -130" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
     </g>
+  </g>
+  
+  <!-- Armchair center-left -->
+  <g opacity="0.75">
+    <path d="M 480.0 550.0 Q 480.0 400.0, 640.0 380.0
+             L 832.0 400.0
+             Q 864.0 440.0, 864.0 600.0
+             L 864.0 920.0
+             L 480.0 920.0 Z"
+          fill="#8a6b4c" opacity="0.7"/>
+    <ellipse cx="656.0" cy="620.0" rx="112.00000000000001" ry="100.0" fill="#e8d5b7" opacity="0.5"/>
+    <!-- Cushion -->
+    <ellipse cx="640.0" cy="480.0" rx="80.0" ry="40.0" fill="#5a7556" opacity="0.4"/>
+  </g>
+  
+  <!-- Secondary plant on right -->
+  <g opacity="0.65" transform="translate(1248.0,580.0)">
+    <path d="M -35 120 L 35 120 L 50 200 L -50 200 Z" fill="#8a6b4c" opacity="0.65"/>
+    <g>
+      <path d="M 0 110 Q -20 50, -50 -10 Q -70 -70, -60 -120" stroke="#3f5a3f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M 0 110 Q 0 40, 5 -40 Q 10 -100, 25 -150" stroke="#3f5a3f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85"/>
+      <path d="M 0 110 Q 20 50, 40 -10 Q 60 -60, 70 -100" stroke="#3f5a3f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Round side table center -->
+  <g opacity="0.7">
+    <ellipse cx="960.0" cy="780.0" rx="96.0" ry="15.0" fill="#c9a888"/>
+    <ellipse cx="960.0" cy="800.0" rx="96.0" ry="15.0" fill="#8a6b4c" opacity="0.7"/>
+    <rect x="927.9999999999999" y="800.0" width="64.0" height="150.0" fill="#8a6b4c" opacity="0.6"/>
+  </g>
+  
+  <rect width="1600" height="1000" filter="url(#augrain)" opacity="0.35"/>
 </svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="abg" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#f4e9d8"/>
+      <stop offset="100%" stop-color="#c9a888"/>
+    </linearGradient>
+    <radialGradient id="asub" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#2a1f15" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2a1f15" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#abg)"/>
+  <rect width="900" height="1100" fill="url(#asub)"/>
+  <!-- Portrait silhouette hint -->
+  <ellipse cx="450.0" cy="418.0" rx="126.00000000000001" ry="110.0" fill="#2a1f15" opacity="0.15"/>
+  <path d="M 270.0 605.0 Q 450.0 528.0, 630.0 605.0 L 675.0 1100 L 225.0 1100 Z" fill="#2a1f15" opacity="0.12"/>
+</svg>

@@ -1,20 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f2eee2"/>
-      <stop offset="100%" stop-color="#e8dec5"/>
+    <linearGradient id="hbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4e9d8"/>
+      <stop offset="100%" stop-color="#c9a888"/>
     </linearGradient>
+    <radialGradient id="hsun" cx="40%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#f4e9d8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f4e9d8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Curtain stripes -->
+    <pattern id="hpleat" x="0" y="0" width="50" height="100" patternUnits="userSpaceOnUse">
+      <rect width="50" height="100" fill="none"/>
+      <line x1="25" y1="0" x2="25" y2="100" stroke="#c9a888" stroke-width="2" opacity="0.1"/>
+      <line x1="0" y1="0" x2="0" y2="100" stroke="#8a6b4c" stroke-width="1" opacity="0.06"/>
+    </pattern>
+    <filter id="hgrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0.06 0"/>
+    </filter>
   </defs>
-  <rect width="1600" height="1100" fill="url(#bg)"/>
-  <g transform="translate(800.0,550.0)" opacity="0.14">
-      <!-- Canopy: layered organic blobs -->
-      <ellipse cx="0" cy="-46.20000000000001" rx="138.60000000000002" ry="115.50000000000003" fill="#35654d"/>
-      <ellipse cx="-77.00000000000001" cy="-15.400000000000004" rx="77.00000000000001" ry="69.30000000000001" fill="#35654d"/>
-      <ellipse cx="77.00000000000001" cy="-15.400000000000004" rx="77.00000000000001" ry="69.30000000000001" fill="#35654d"/>
-      <!-- Trunk -->
-      <rect x="-12.320000000000002" y="23.100000000000005" width="24.640000000000004" height="100.10000000000002" fill="#35654d" opacity="0.85"/>
-      <!-- Roots suggestion -->
-      <path d="M 0 123.20000000000003 Q -46.20000000000001 138.60000000000002, -77.00000000000001 146.3 M 0 123.20000000000003 Q 46.20000000000001 138.60000000000002, 77.00000000000001 146.3"
-            stroke="#35654d" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
+  
+  <rect width="1600" height="1200" fill="url(#hbg)"/>
+  <rect width="1600" height="1200" fill="url(#hpleat)"/>
+  <rect width="1600" height="1200" fill="url(#hsun)"/>
+  
+  <!-- Large potted plant (center-left, prominent) -->
+  <g opacity="0.75" transform="translate(480.0,660.0)">
+    <!-- Pot -->
+    <path d="M -70 180 L 70 180 L 90 290 L -90 290 Z" fill="#8a6b4c" opacity="0.75"/>
+    <ellipse cx="0" cy="180" rx="70" ry="12" fill="#8a6b4c" opacity="0.85"/>
+    <!-- Large palm fronds -->
+    <g>
+      <path d="M 0 170 Q -30 100, -80 20 Q -110 -60, -100 -140" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
+      <path d="M 0 170 Q -10 80, -30 -20 Q -40 -120, -20 -200" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 0 170 Q 10 70, 20 -40 Q 30 -140, 50 -220" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+      <path d="M 0 170 Q 30 90, 70 10 Q 110 -50, 130 -110" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
+      <!-- Small leaves branching -->
+      <path d="M -40 0 Q -70 -10, -90 -25" stroke="#5a7556" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M -15 -80 Q -35 -95, -50 -110" stroke="#5a7556" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M 20 -60 Q 40 -75, 50 -100" stroke="#5a7556" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
     </g>
+  </g>
+  
+  <!-- Armchair (left foreground, cropped) -->
+  <g opacity="0.7">
+    <path d="M -80.0 660.0 Q -80.0 480.0, 80.0 456.0
+             L 224.00000000000003 504.0
+             Q 256.0 552.0, 224.00000000000003 720.0
+             L 224.00000000000003 1200
+             L -80.0 1200 Z"
+          fill="#8a6b4c" opacity="0.75"/>
+    <ellipse cx="96.0" cy="720.0" rx="96.0" ry="96.0" fill="#e8d5b7" opacity="0.4"/>
+  </g>
+  
+  <!-- Round side table (right, mid) -->
+  <g opacity="0.72">
+    <ellipse cx="1152.0" cy="888.0" rx="192.0" ry="30.0" fill="#c9a888" opacity="0.95"/>
+    <ellipse cx="1152.0" cy="912.0" rx="192.0" ry="30.0" fill="#8a6b4c" opacity="0.7"/>
+    <!-- Table legs/base -->
+    <rect x="1104.0" y="912.0" width="96.0" height="264.0" fill="#8a6b4c" opacity="0.6"/>
+    <!-- Books on table -->
+    <rect x="1056.0" y="816.0000000000001" width="128.0" height="60.0" fill="#8a6b4c" opacity="0.65"/>
+    <rect x="1072.0" y="780.0" width="112.00000000000001" height="36.0" fill="#c9a888" opacity="0.75"/>
+  </g>
+  
+  <!-- Grain -->
+  <rect width="1600" height="1200" filter="url(#hgrain)" opacity="0.35"/>
 </svg>
