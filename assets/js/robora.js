@@ -1,13 +1,13 @@
-/* Robora Therapy Solutions — site JS
-   Lightweight, no dependencies. Loaded with `defer` from every page. */
+/* Robora Therapy Solutions — v2 site JS
+   Lightweight, no dependencies. */
 
 (function () {
-  // ─── Mobile nav drawer ─────────────────────────────────────
-  const toggle   = document.getElementById('navToggle');
-  const links    = document.getElementById('navLinks');
+  // Mobile nav drawer
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
   const backdrop = document.getElementById('navBackdrop');
 
-  function openMenu(){
+  function openMenu() {
     links.classList.add('is-open');
     backdrop.classList.add('is-open');
     toggle.classList.add('is-open');
@@ -15,7 +15,7 @@
     toggle.setAttribute('aria-label', 'Close menu');
     document.body.classList.add('menu-open');
   }
-  function closeMenu(){
+  function closeMenu() {
     links.classList.remove('is-open');
     backdrop.classList.remove('is-open');
     toggle.classList.remove('is-open');
@@ -23,7 +23,7 @@
     toggle.setAttribute('aria-label', 'Open menu');
     document.body.classList.remove('menu-open');
   }
-  function isOpen(){ return links && links.classList.contains('is-open'); }
+  function isOpen() { return links && links.classList.contains('is-open'); }
 
   if (toggle && links && backdrop) {
     toggle.addEventListener('click', () => { isOpen() ? closeMenu() : openMenu(); });
@@ -42,7 +42,7 @@
     });
   }
 
-  // ─── Reveal-on-scroll ─────────────────────────────────────
+  // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -53,7 +53,7 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // ─── Mark current page in nav ─────────────────────────────
+  // Current page nav highlight
   const path = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-links a[href]').forEach(a => {
     const href = a.getAttribute('href').replace(/\/$/, '') || '/';
@@ -63,9 +63,7 @@
     }
   });
 
-  // ─── Form helpers ─────────────────────────────────────────
-  // Generic "submit and show success" handler — used across all forms
-  // until a real backend (Formspree / Basin / Netlify Forms) is wired up.
+  // Form stub
   window.handleFormStub = function(e, successMsg) {
     e.preventDefault();
     const form = e.target;
@@ -83,8 +81,7 @@
     }, 4000);
   };
 
-  // Multi-step form helper for /book/
-  // Looks for elements with class .step and progresses through them.
+  // Multi-step form
   window.initStepForm = function(formId) {
     const form = document.getElementById(formId);
     if (!form) return;
@@ -97,12 +94,10 @@
         s.classList.toggle('is-active', idx === i);
         s.setAttribute('aria-hidden', idx === i ? 'false' : 'true');
       });
-      // Update progress dots
       form.querySelectorAll('.step-dots span').forEach((d, idx) => {
         d.classList.toggle('is-active', idx === i);
         d.classList.toggle('is-done', idx < i);
       });
-      // Focus the first input in the new step
       const firstInput = steps[i].querySelector('input, select, textarea, button');
       if (firstInput) setTimeout(() => firstInput.focus(), 100);
       currentStep = i;
@@ -111,17 +106,12 @@
     form.querySelectorAll('[data-next]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        // Validate current step
         const step = steps[currentStep];
         const requiredInputs = step.querySelectorAll('[required]');
         let valid = true;
         requiredInputs.forEach(inp => {
-          if (!inp.checkValidity()) {
-            valid = false;
-            inp.reportValidity();
-          }
+          if (!inp.checkValidity()) { valid = false; inp.reportValidity(); }
         });
-        // Special case: if step has radio group, ensure one is selected
         const radios = step.querySelectorAll('input[type=radio]');
         if (radios.length > 0) {
           const groupNames = new Set();
