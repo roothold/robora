@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Soft gradient background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2eee2"/>
+      <stop offset="100%" stop-color="#e8dec5"/>
+    </linearGradient>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="40" height="40">
+      <circle cx="20" cy="20" r="1.5" fill="#35654d" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#dots)"/>
+  
+  <!-- Centered content -->
+  <g transform="translate(800,500)">
+    <!-- Oak tree icon (simplified) -->
+    <g transform="translate(0,-163)" opacity="0.4">
+      <path d="M -83 55 Q -55 -41, 0 -83 Q 55 -41, 83 55 Z"
+        fill="#35654d" opacity="0.6"/>
+      <rect x="-4" y="41" width="8" height="41" fill="#26473a"/>
+    </g>
+    
+    <!-- Label -->
+    <text x="0" y="0" text-anchor="middle" 
+      font-family="Georgia, serif" font-size="50" fill="#26473a" 
+      font-weight="500" letter-spacing="0.15em">AUDIENCES</text>
+    
+    <!-- Separator -->
+    <line x1="-30" y1="45" x2="30" y2="45" 
+      stroke="#d4af37" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Description -->
+    <text x="0" y="110" text-anchor="middle" 
+      font-family="system-ui, sans-serif" font-size="22" fill="#26473a" 
+      opacity="0.65">Full therapy space — armchair, multiple plants, bright window</text>
+    
+    <!-- Dimensions -->
+    <text x="0" y="140" text-anchor="middle" 
+      font-family="monospace" font-size="20" fill="#26473a" 
+      opacity="0.4">1600 × 1000</text>
+  </g>
+  
+  <!-- Corner marker -->
+  <text x="20" y="980" font-family="monospace" font-size="12" fill="#26473a" opacity="0.4">PLACEHOLDER</text>
+</svg>
