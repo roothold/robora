@@ -1,69 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="hbg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="hwall" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#f4e9d8"/>
+      <stop offset="55%" stop-color="#e8d5b7"/>
       <stop offset="100%" stop-color="#c9a888"/>
     </linearGradient>
-    <radialGradient id="hsun" cx="40%" cy="20%" r="60%">
-      <stop offset="0%" stop-color="#f4e9d8" stop-opacity="0.85"/>
+    <linearGradient id="hfloor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c9a888"/>
+      <stop offset="100%" stop-color="#8a6b4c"/>
+    </linearGradient>
+    <radialGradient id="hsun" cx="42%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#f4e9d8" stop-opacity="0.95"/>
       <stop offset="100%" stop-color="#f4e9d8" stop-opacity="0"/>
     </radialGradient>
-    <!-- Curtain stripes -->
-    <pattern id="hpleat" x="0" y="0" width="50" height="100" patternUnits="userSpaceOnUse">
-      <rect width="50" height="100" fill="none"/>
-      <line x1="25" y1="0" x2="25" y2="100" stroke="#c9a888" stroke-width="2" opacity="0.1"/>
-      <line x1="0" y1="0" x2="0" y2="100" stroke="#8a6b4c" stroke-width="1" opacity="0.06"/>
+    <pattern id="hpleat" x="0" y="0" width="55" height="100" patternUnits="userSpaceOnUse">
+      <line x1="27" y1="0" x2="27" y2="100" stroke="#c9a888" stroke-width="2.5" opacity="0.14"/>
+      <line x1="0" y1="0" x2="0" y2="100" stroke="#8a6b4c" stroke-width="1.5" opacity="0.08"/>
     </pattern>
-    <filter id="hgrain" x="0" y="0" width="100%" height="100%">
+    <filter id="hgrain">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
-      <feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0.06 0"/>
+      <feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0.07 0"/>
     </filter>
   </defs>
   
-  <rect width="1600" height="1200" fill="url(#hbg)"/>
-  <rect width="1600" height="1200" fill="url(#hpleat)"/>
+  <!-- Base layers -->
+  <rect width="1600" height="936.0" fill="url(#hwall)"/>
+  <rect y="936.0" width="1600" height="264.0" fill="url(#hfloor)"/>
+  <rect width="1600" height="936.0" fill="url(#hpleat)"/>
   <rect width="1600" height="1200" fill="url(#hsun)"/>
   
-  <!-- Large potted plant (center-left, prominent) -->
-  <g opacity="0.75" transform="translate(480.0,660.0)">
-    <!-- Pot -->
-    <path d="M -70 180 L 70 180 L 90 290 L -90 290 Z" fill="#8a6b4c" opacity="0.75"/>
-    <ellipse cx="0" cy="180" rx="70" ry="12" fill="#8a6b4c" opacity="0.85"/>
-    <!-- Large palm fronds -->
-    <g>
-      <path d="M 0 170 Q -30 100, -80 20 Q -110 -60, -100 -140" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
-      <path d="M 0 170 Q -10 80, -30 -20 Q -40 -120, -20 -200" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 0 170 Q 10 70, 20 -40 Q 30 -140, 50 -220" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
-      <path d="M 0 170 Q 30 90, 70 10 Q 110 -50, 130 -110" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
-      <!-- Small leaves branching -->
-      <path d="M -40 0 Q -70 -10, -90 -25" stroke="#5a7556" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
-      <path d="M -15 -80 Q -35 -95, -50 -110" stroke="#5a7556" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
-      <path d="M 20 -60 Q 40 -75, 50 -100" stroke="#5a7556" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
-    </g>
+  <!-- Framed artwork hint (upper right) -->
+  <g opacity="0.4">
+    <rect x="1184.0" y="180.0" width="224.00000000000003" height="240.0" fill="#f4e9d8" stroke="#8a6b4c" stroke-width="2.5"/>
+    <rect x="1216.0" y="216.0" width="160.0" height="168.00000000000003" fill="#5a7556" opacity="0.5"/>
   </g>
   
-  <!-- Armchair (left foreground, cropped) -->
-  <g opacity="0.7">
-    <path d="M -80.0 660.0 Q -80.0 480.0, 80.0 456.0
-             L 224.00000000000003 504.0
-             Q 256.0 552.0, 224.00000000000003 720.0
-             L 224.00000000000003 1200
-             L -80.0 1200 Z"
-          fill="#8a6b4c" opacity="0.75"/>
-    <ellipse cx="96.0" cy="720.0" rx="96.0" ry="96.0" fill="#e8d5b7" opacity="0.4"/>
+  <!-- Floor shadow -->
+  <ellipse cx="800.0" cy="1032.0" rx="640.0" ry="36.0" fill="#2a1f15" opacity="0.12"/>
+  
+  <!-- Large potted palm (center) -->
+  <g opacity="0.82" transform="translate(560.0,600.0)">
+    <path d="M -75 185 L 75 185 L 95 295 L -95 295 Z" fill="#8a6b4c" opacity="0.78"/>
+    <ellipse cx="0" cy="185" rx="75" ry="12" fill="#2a1f15" opacity="0.3"/>
+    <ellipse cx="0" cy="188" rx="75" ry="12" fill="#8a6b4c"/>
+    <!-- Palm fronds -->
+    <path d="M 0 175 Q -35 100, -85 25 Q -115 -55, -105 -135" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M 0 175 Q -15 85, -35 -20 Q -45 -125, -25 -210" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 0 175 Q 10 85, 20 -30 Q 30 -140, 50 -225" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.95"/>
+    <path d="M 0 175 Q 30 95, 70 10 Q 110 -60, 130 -115" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M 0 175 Q 55 100, 110 40 Q 150 -10, 165 -45" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 0 175 Q -45 95, -100 55 Q -140 20, -150 -5" stroke="#3f5a3f" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <!-- Secondary smaller leaves -->
+    <path d="M -40 10 Q -75 -5, -100 -20" stroke="#4d6b4d" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M -10 -70 Q -40 -90, -60 -110" stroke="#4d6b4d" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M 25 -55 Q 55 -75, 70 -100" stroke="#4d6b4d" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M 60 -30 Q 90 -50, 105 -70" stroke="#4d6b4d" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
   </g>
   
-  <!-- Round side table (right, mid) -->
-  <g opacity="0.72">
-    <ellipse cx="1152.0" cy="888.0" rx="192.0" ry="30.0" fill="#c9a888" opacity="0.95"/>
-    <ellipse cx="1152.0" cy="912.0" rx="192.0" ry="30.0" fill="#8a6b4c" opacity="0.7"/>
-    <!-- Table legs/base -->
-    <rect x="1104.0" y="912.0" width="96.0" height="264.0" fill="#8a6b4c" opacity="0.6"/>
-    <!-- Books on table -->
-    <rect x="1056.0" y="816.0000000000001" width="128.0" height="60.0" fill="#8a6b4c" opacity="0.65"/>
-    <rect x="1072.0" y="780.0" width="112.00000000000001" height="36.0" fill="#c9a888" opacity="0.75"/>
+  <!-- Armchair (left foreground, substantial) -->
+  <g opacity="0.78">
+    <!-- Chair base -->
+    <path d="M -48.0 696.0 Q -48.0 504.0, 128.0 480.0
+             L 320.0 504.0
+             Q 352.0 552.0, 352.0 744.0
+             L 352.0 1104.0
+             L -48.0 1104.0 Z"
+          fill="#8a6b4c" opacity="0.78"/>
+    <!-- Chair cushion highlight -->
+    <ellipse cx="144.0" cy="744.0" rx="120.0" ry="108.0" fill="#e8d5b7" opacity="0.45"/>
+    <!-- Pillow -->
+    <path d="M 32.0 600.0 Q 48.0 552.0, 128.0 552.0 
+             Q 208.0 564.0, 208.0 624.0 L 48.0 672.0000000000001 Z" 
+          fill="#5a7556" opacity="0.65"/>
+    <!-- Chair arm -->
+    <path d="M -48.0 780.0 Q -128.0 816.0000000000001, -128.0 1056.0 L -48.0 1104.0" 
+          fill="#8a6b4c" opacity="0.7"/>
   </g>
   
-  <!-- Grain -->
-  <rect width="1600" height="1200" filter="url(#hgrain)" opacity="0.35"/>
+  <!-- Round wooden side table with items -->
+  <g opacity="0.78">
+    <!-- Tabletop -->
+    <ellipse cx="1088.0" cy="864.0" rx="176.0" ry="26.4" fill="#c9a888"/>
+    <ellipse cx="1088.0" cy="882.0" rx="176.0" ry="26.4" fill="#8a6b4c" opacity="0.7"/>
+    <!-- Table pedestal -->
+    <path d="M 1048.0 888.0 L 1128.0 888.0 L 1152.0 1140.0 L 1024.0 1140.0 Z" fill="#8a6b4c" opacity="0.72"/>
+    <!-- Stack of books -->
+    <rect x="984.0" y="827.9999999999999" width="152.0" height="36.0" fill="#8a6b4c" opacity="0.75"/>
+    <rect x="992.0" y="798.0" width="136.0" height="30.0" fill="#3f5a3f" opacity="0.7"/>
+    <rect x="1000.0" y="774.0" width="120.0" height="24.0" fill="#c9a888" opacity="0.8"/>
+    <!-- Mug on books -->
+    <ellipse cx="1152.0" cy="798.0" rx="28.799999999999997" ry="7.2" fill="#f4e9d8" opacity="0.8"/>
+    <rect x="1123.1999999999998" y="798.0" width="57.599999999999994" height="42.00000000000001" fill="#f4e9d8" opacity="0.8" rx="2"/>
+    <path d="M 1180.8 810.0 Q 1200.0 810.0, 1200.0 822.0000000000001 Q 1200.0 833.9999999999999, 1180.8 833.9999999999999" 
+          stroke="#f4e9d8" stroke-width="2.5" fill="none" opacity="0.75"/>
+  </g>
+  
+  <!-- Floor plant far right -->
+  <g opacity="0.72" transform="translate(1440.0,780.0)">
+    <path d="M -40 125 L 40 125 L 55 210 L -55 210 Z" fill="#8a6b4c" opacity="0.72"/>
+    <ellipse cx="0" cy="125" rx="40" ry="7" fill="#8a6b4c"/>
+    <path d="M 0 115 Q -20 50, -50 -10 Q -70 -70, -60 -110" stroke="#3f5a3f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 0 115 Q -5 50, -10 -30 Q -5 -100, 10 -140" stroke="#3f5a3f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M 0 115 Q 15 45, 30 -25 Q 50 -90, 65 -130" stroke="#3f5a3f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 0 115 Q 25 55, 55 15 Q 85 -20, 95 -45" stroke="#3f5a3f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <!-- Rug suggestion on floor -->
+  <g opacity="0.4">
+    <path d="M 80.0 1080.0 L 1200.0 1080.0 L 1248.0 1176.0 L 32.0 1176.0 Z" fill="#8a6b4c"/>
+  </g>
+  
+  <!-- Grain overlay -->
+  <rect width="1600" height="1200" filter="url(#hgrain)" opacity="0.4"/>
 </svg>

@@ -223,6 +223,13 @@ p { color: var(--ink-soft); line-height: 1.65; }
   color: var(--ink-soft); transition: color var(--t);
 }
 .nav__links a:hover { color: var(--moss-deep); }
+/* Keep button text light inside the nav - override the link color above */
+.nav__links a.btn--primary {
+  color: var(--ivory);
+  font-size: var(--fs-sm);
+  padding: 12px 22px;
+}
+.nav__links a.btn--primary:hover { color: var(--ivory); }
 
 .nav__toggle {
   display: none; width: 44px; height: 44px;
@@ -311,19 +318,22 @@ p { color: var(--ink-soft); line-height: 1.65; }
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
   gap: var(--space-6);
-  max-width: calc(var(--container-max) + var(--pad-x));
-  margin: 0 0 0 auto;
-  padding-right: var(--pad-x);
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--pad-x);
   align-items: center;
 }
 .about__portrait {
   position: relative;
   aspect-ratio: 4 / 5;
-  min-height: clamp(500px, 55vw, 700px);
+  min-height: 500px;
+  max-height: 720px;
   border-top-right-radius: var(--r-lg);
   border-bottom-right-radius: var(--r-lg);
   overflow: hidden;
-  margin-left: calc(50% - 50vw);
+  /* Partial bleed - portrait extends only ~80px past the normal container,
+     keeping more of the subject visible */
+  margin-left: calc(-1 * var(--pad-x));
 }
 .about__portrait img {
   width: 100%; height: 100%;
@@ -334,9 +344,9 @@ p { color: var(--ink-soft); line-height: 1.65; }
 .about__nameplate {
   position: absolute;
   left: var(--space-4);
-  right: var(--space-4);
   bottom: var(--space-4);
-  max-width: 420px;
+  max-width: 380px;
+  width: calc(100% - var(--space-5));
   background: var(--ivory);
   padding: 18px 24px;
   border-radius: var(--r-md);
@@ -377,7 +387,7 @@ p { color: var(--ink-soft); line-height: 1.65; }
 .about__nameplate-arrow:hover { transform: translateX(2px); }
 .about__nameplate-arrow svg { width: 18px; height: 18px; }
 
-.about__text { padding-left: var(--space-3); max-width: 640px; }
+.about__text { max-width: 640px; }
 .about__title { margin-bottom: var(--space-3); }
 .about__body {
   font-size: var(--fs-md);
@@ -385,7 +395,11 @@ p { color: var(--ink-soft); line-height: 1.65; }
   max-width: 52ch;
   margin-bottom: var(--space-4);
 }
-.about__pills { display: flex; gap: 12px; flex-wrap: wrap; }
+.about__pills {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 12px;
+}
 
 /* APPROACH */
 .approach {
@@ -579,7 +593,7 @@ p { color: var(--ink-soft); line-height: 1.65; }
 
 /* PATH */
 .path {
-  padding: var(--space-7) 0;
+  padding: var(--space-6) 0;
   background: var(--ivory);
   position: relative;
 }
@@ -597,7 +611,7 @@ p { color: var(--ink-soft); line-height: 1.65; }
   font-size: var(--fs-md);
   line-height: 1.55;
   max-width: 46ch;
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-3);
 }
 .path__list { display: flex; flex-direction: column; gap: 6px; }
 .path__list li {
@@ -614,10 +628,10 @@ p { color: var(--ink-soft); line-height: 1.65; }
 }
 .testimonial {
   background: var(--paper);
-  padding: var(--space-6) var(--space-5);
+  padding: var(--space-5) var(--space-5);
   border-radius: var(--r-lg);
   position: relative;
-  margin-top: var(--space-4);
+  margin-top: 0;
 }
 .testimonial__mark {
   font-family: var(--font-display);
@@ -654,7 +668,7 @@ p { color: var(--ink-soft); line-height: 1.65; }
 
 /* CTA */
 .cta {
-  padding: var(--space-5) 0 var(--space-7);
+  padding: var(--space-5) 0 0;
   background: var(--ivory);
   overflow: hidden;
 }
@@ -854,4 +868,5 @@ p { color: var(--ink-soft); line-height: 1.65; }
   .audiences__card, .cta__card { margin-inline: 0; border-radius: 0; }
   .about__portrait { min-height: 440px; }
   .hero__media { min-height: 400px; }
+  .about__pills { grid-template-columns: 1fr; }
 }
