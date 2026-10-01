@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2eee2"/>
+      <stop offset="100%" stop-color="#e8dec5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+  <g transform="translate(500.0,350.0)" opacity="0.14">
+      <!-- Canopy: layered organic blobs -->
+      <ellipse cx="0" cy="-29.400000000000002" rx="88.20000000000002" ry="73.50000000000001" fill="#35654d"/>
+      <ellipse cx="-49.00000000000001" cy="-9.800000000000002" rx="49.00000000000001" ry="44.10000000000001" fill="#35654d"/>
+      <ellipse cx="49.00000000000001" cy="-9.800000000000002" rx="49.00000000000001" ry="44.10000000000001" fill="#35654d"/>
+      <!-- Trunk -->
+      <rect x="-7.840000000000002" y="14.700000000000001" width="15.680000000000003" height="63.70000000000001" fill="#35654d" opacity="0.85"/>
+      <!-- Roots suggestion -->
+      <path d="M 0 78.40000000000002 Q -29.400000000000002 88.20000000000002, -49.00000000000001 93.10000000000001 M 0 78.40000000000002 Q 29.400000000000002 88.20000000000002, 49.00000000000001 93.10000000000001"
+            stroke="#35654d" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    </g>
+</svg>
